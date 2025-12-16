@@ -15,9 +15,12 @@ TOKEN = os.getenv("TELEGRAM_TOKEN")
 API_URL = "https://rossmann-api-ekwe.onrender.com/rossmann/predict"
 TELEGRAM_URL = f"https://api.telegram.org/bot{TOKEN}"
 
-DATA_PATH = "../data"
-TEST_FILE = f"{DATA_PATH}/test.csv"
-STORE_FILE = f"{DATA_PATH}/store.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+DATA_PATH = os.path.join(BASE_DIR, "data")
+TEST_FILE = os.path.join(DATA_PATH, "test.csv")
+STORE_FILE = os.path.join(DATA_PATH, "store.csv")
+
 
 REQUEST_INTERVAL = 5  # seconds (rate limit per user)
 last_request_time = {}
