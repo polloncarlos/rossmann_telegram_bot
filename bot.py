@@ -90,7 +90,8 @@ def predict(data):
 # UTILS
 # =============================
 def format_currency(value):
-    return f"R$ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    #return f"R$ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    return f"€ {value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") #change currency, rossmann uses euro
 
 
 def extract_store_ids(text):
